@@ -54,7 +54,7 @@ export default function Education() {
   })
 
   return (
-    <section id="education" className="section-container bg-gray-900/50">
+    <section id="education" className="section-container bg-gradient-to-b from-transparent via-gray-900/30 to-transparent">
       <div ref={ref} className={`${inView ? 'animate-fade-in' : 'opacity-0'}`}>
         {/* Section Header */}
         <div className="text-center mb-16">

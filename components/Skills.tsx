@@ -75,7 +75,7 @@ export default function Skills() {
   })
 
   return (
-    <section id="skills" className="section-container bg-gray-900/50">
+    <section id="skills" className="section-container bg-gradient-to-b from-transparent via-emerald-950/20 to-transparent">
       <div ref={ref} className={`${inView ? 'animate-fade-in' : 'opacity-0'}`}>
         {/* Section Header */}
         <div className="text-center mb-16">

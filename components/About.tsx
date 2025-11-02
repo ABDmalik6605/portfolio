@@ -33,7 +33,7 @@ export default function About() {
   })
 
   return (
-    <section id="about" className="section-container bg-gray-950">
+    <section id="about" className="section-container relative z-10 bg-gradient-to-b from-transparent via-gray-900/20 to-transparent">
       <div ref={ref} className={`${inView ? 'animate-fade-in' : 'opacity-0'}`}>
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -108,21 +108,21 @@ export default function About() {
           </div>
         </div>
 
-        {/* Highlights Grid */}
+          {/* Highlights Grid with Enhanced Animations */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
           {highlights.map((item, index) => {
             const Icon = item.icon
             return (
               <div
                 key={item.title}
-                className="card-gradient rounded-xl p-6 hover:scale-105 transition-transform duration-300 group"
+                className="card-gradient rounded-xl p-6 hover:scale-110 hover:-translate-y-2 transition-all duration-300 group animate-fade-in-up shine cursor-pointer"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-accent-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary-600 via-accent-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300 animate-gradient glow">
                   <Icon className="text-white" size={24} />
                 </div>
-                <h4 className="text-xl font-semibold mb-2 text-gray-100">{item.title}</h4>
-                <p className="text-gray-400">{item.description}</p>
+                <h4 className="text-xl font-semibold mb-2 text-gray-100 gradient-text">{item.title}</h4>
+                <p className="text-gray-400 group-hover:text-gray-300 transition-colors">{item.description}</p>
               </div>
             )
           })}

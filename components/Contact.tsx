@@ -81,7 +81,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="section-container bg-gray-950">
+    <section id="contact" className="section-container bg-gradient-to-b from-transparent to-gray-900/30">
       <div ref={ref} className={`${inView ? 'animate-fade-in' : 'opacity-0'}`}>
         {/* Section Header */}
         <div className="text-center mb-16">

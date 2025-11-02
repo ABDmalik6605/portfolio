@@ -83,7 +83,7 @@ export default function Projects() {
       : projects.filter((project) => project.category === selectedCategory)
 
   return (
-    <section id="projects" className="section-container bg-gray-950">
+    <section id="projects" className="section-container bg-gradient-to-b from-transparent via-gray-900/20 to-transparent">
       <div ref={ref} className={`${inView ? 'animate-fade-in' : 'opacity-0'}`}>
         {/* Section Header */}
         <div className="text-center mb-16">

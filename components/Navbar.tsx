@@ -36,20 +36,20 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 md:h-20">
-          {/* Logo with Profile Picture */}
+          {/* Logo with Profile Picture and Enhanced Effects */}
           <Link href="#home" className="flex items-center gap-3 group">
-            <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary-500 group-hover:ring-accent-500 transition-all duration-300">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-600 to-accent-600 p-0.5">
+            <div className="relative w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary-500 group-hover:ring-cyan-500 transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-accent-600 to-cyan-600 p-0.5 animate-gradient">
                 <div className="w-full h-full bg-gray-900 rounded-full overflow-hidden">
                   <img 
                     src="/images/profile.jpg" 
                     alt="Abdullah Malik" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
               </div>
             </div>
-            <span className="text-xl font-bold gradient-text hidden sm:block">Abdullah Malik</span>
+            <span className="text-xl font-bold gradient-text hidden sm:block group-hover:scale-105 transition-transform">Abdullah Malik</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -58,10 +58,11 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-primary-400 transition-colors duration-300 relative group"
+                className="text-gray-300 hover:text-primary-400 transition-all duration-300 relative group hover:scale-110"
               >
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-accent-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-500 via-accent-500 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute inset-0 bg-primary-500/5 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
               </a>
             ))}
           </div>
